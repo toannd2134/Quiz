@@ -9,56 +9,54 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var TimeView: UIView!
+    @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var TexViewQuestion: UITextView!
-    
-   
     @IBOutlet weak var image: UIImageView!
-    
     var isCorect : Bool!
     var numberOfCorectAnwser = 0
     
     @IBOutlet var anwserChoice: [UIButton]!
     
-   var curentQuestion = 0
+    var curentQuestion = 0
     var groupQuiz = [Question]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      addQuestion()
+        
+        addQuestion()
         setup()
-     
+        performQuestion()
         
     }
-
+    
     func addQuestion(){
-       
-        let quiz1 = Question(image: nil, question: "asdas", CorectAnser: 1, anwser: ["sad","asds","asda","sadas"])
-        groupQuiz.append(quiz1)
-        let quiz2 = Question(image: nil, question: "sad", CorectAnser: 1, anwser: ["asd","sdas","sad","asds"])
-        groupQuiz.append(quiz2)
+        let vc = FirstViewController()
+        vc.passData = { [weak self] data in
+            guard let main = self else {
+                return
+            }
+            main.groupQuiz = data
+            
+        }
         
     }
     func setup(){
-           TimeView.layer.cornerRadius = 20
-           TexViewQuestion.isEditable = false
-        
-           performQuestion()
-        
+        timeView.layer.cornerRadius = 20
+        TexViewQuestion.isEditable = false
+        performQuestion()
         
     }
+    
     func performQuestion(){
         if curentQuestion < groupQuiz.count{
-        TexViewQuestion.text = groupQuiz[curentQuestion].question
-                   image.image = groupQuiz[curentQuestion].image
-                   for j in 0...groupQuiz[curentQuestion].anwser.count - 1  {
-                       
-                           anwserChoice[j].setTitle(groupQuiz[curentQuestion].anwser[j], for: .normal)
-                          
-                       
-                   }
+            TexViewQuestion.text = groupQuiz[curentQuestion].question
+            image.image = groupQuiz[curentQuestion].image
+            for j in 0...groupQuiz[curentQuestion].anwser.count - 1  {
+                anwserChoice[j].setTitle(groupQuiz[curentQuestion].anwser[j], for: .normal)
+            }
+        }
     }
-    }
- 
+    
     
     @IBAction func anwserChoice(_ sender: UIButton) {
         if  curentQuestion < groupQuiz.count - 1{
@@ -66,25 +64,23 @@ class ViewController: UIViewController {
                 for i in self.anwserChoice {
                     if i.tag == sender.tag {
                         let _ = UIView.animate(withDuration: 0.5, animations: {
-                            
                             i.backgroundColor = .red
                             self.numberOfCorectAnwser += 1
-                            
+                            self.performQuestion()
                             print(self.numberOfCorectAnwser)
-                            
                         }) { (_) in
-                            
+                            i.backgroundColor = .white
                             self.curentQuestion += 1
                             self.performQuestion()
-                            i.backgroundColor = .white
-                            
-                            
                         }
-                    }}
-                
-                
-                
-                
+                    }else{
+                       
+                    }
+                }
+            }else{
+               self.curentQuestion += 1
+               self.performQuestion()
+             
             }
         }else{
             let vc = ResurtViewController()
