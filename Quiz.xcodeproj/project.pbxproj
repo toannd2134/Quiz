@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5416AEAC246DD33C005F4F47 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5416AEAB246DD33C005F4F47 /* FirstViewController.swift */; };
 		5416DBD3246F1F1E00170DD2 /* ResurtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5416DBD2246F1F1E00170DD2 /* ResurtViewController.swift */; };
+		541723B82472E103006B6479 /* corect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 541723B72472E103006B6479 /* corect.mp3 */; };
+		541723BA2472E109006B6479 /* incorrect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 541723B92472E109006B6479 /* incorrect.mp3 */; };
+		541723BC2472E832006B6479 /* sai.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 541723BB2472E832006B6479 /* sai.mp3 */; };
+		546992512471C68C00AB5E47 /* cellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546992502471C68C00AB5E47 /* cellTableViewCell.swift */; };
 		54845BB3246FBFC200FDA98F /* catgory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54845BB2246FBFC200FDA98F /* catgory.swift */; };
 		54CD988F246C6619004809D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD988E246C6619004809D8 /* AppDelegate.swift */; };
 		54CD9891246C6619004809D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CD9890246C6619004809D8 /* SceneDelegate.swift */; };
@@ -22,6 +26,10 @@
 /* Begin PBXFileReference section */
 		5416AEAB246DD33C005F4F47 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		5416DBD2246F1F1E00170DD2 /* ResurtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResurtViewController.swift; sourceTree = "<group>"; };
+		541723B72472E103006B6479 /* corect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = corect.mp3; sourceTree = "<group>"; };
+		541723B92472E109006B6479 /* incorrect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = incorrect.mp3; sourceTree = "<group>"; };
+		541723BB2472E832006B6479 /* sai.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sai.mp3; sourceTree = "<group>"; };
+		546992502471C68C00AB5E47 /* cellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellTableViewCell.swift; sourceTree = "<group>"; };
 		54845BB2246FBFC200FDA98F /* catgory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = catgory.swift; sourceTree = "<group>"; };
 		54CD988B246C6619004809D8 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CD988E246C6619004809D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,8 +78,12 @@
 				5416AEAB246DD33C005F4F47 /* FirstViewController.swift */,
 				54845BB2246FBFC200FDA98F /* catgory.swift */,
 				54CD9894246C6619004809D8 /* Main.storyboard */,
+				546992502471C68C00AB5E47 /* cellTableViewCell.swift */,
 				5416DBD2246F1F1E00170DD2 /* ResurtViewController.swift */,
 				54CD98A4246C66A6004809D8 /* Question.swift */,
+				541723B92472E109006B6479 /* incorrect.mp3 */,
+				541723B72472E103006B6479 /* corect.mp3 */,
+				541723BB2472E832006B6479 /* sai.mp3 */,
 				54CD9897246C661D004809D8 /* Assets.xcassets */,
 				54CD9899246C661D004809D8 /* LaunchScreen.storyboard */,
 				54CD989C246C661D004809D8 /* Info.plist */,
@@ -137,6 +149,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				541723BC2472E832006B6479 /* sai.mp3 in Resources */,
+				541723BA2472E109006B6479 /* incorrect.mp3 in Resources */,
+				541723B82472E103006B6479 /* corect.mp3 in Resources */,
 				54CD989B246C661D004809D8 /* LaunchScreen.storyboard in Resources */,
 				54CD9898246C661D004809D8 /* Assets.xcassets in Resources */,
 				54CD9896246C6619004809D8 /* Main.storyboard in Resources */,
@@ -155,6 +170,7 @@
 				54CD9893246C6619004809D8 /* ViewController.swift in Sources */,
 				54CD98A5246C66A6004809D8 /* Question.swift in Sources */,
 				54845BB3246FBFC200FDA98F /* catgory.swift in Sources */,
+				546992512471C68C00AB5E47 /* cellTableViewCell.swift in Sources */,
 				54CD988F246C6619004809D8 /* AppDelegate.swift in Sources */,
 				54CD9891246C6619004809D8 /* SceneDelegate.swift in Sources */,
 			);

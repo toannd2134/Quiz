@@ -9,22 +9,34 @@
 import UIKit
 
 class ResurtViewController: UIViewController {
-
+   
+     
+    var resurt : Int!
+    @IBOutlet weak var resurtlabel: UILabel!
+   
+    @IBOutlet var button: [UIButton]!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.view.backgroundColor = .red
+        for i in button{
+        i.layer.cornerRadius = 20
+    }
+        resurtlabel.text = "kết quả của bạn. là \(resurt!)/10"
+        self.view.backgroundColor = .white
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func reDo(_ sender: Any) {
+       
+        dismiss(animated: true, completion: nil)
+        
+        
     }
-    */
-
+    
+    @IBAction func popHOme(_ sender: Any) {
+        
+        
+    }
+    
 }
